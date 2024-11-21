@@ -10,13 +10,17 @@ OBJ = $(SRC:%.c=%.o)
 
 FLAGS = -Wall -Werror -Wextra
 
+$(NAME):
+	gcc $(FLAGS) -c $(SRCS)
+	ar rc $(NAME) $(OBJS)
 
-all:
+all: $(NAME)
 
-clean:
+clean: rm -f $(OBJS)
 
-fclean:
+fclean: clean
+		rm -f $(NAME)
 
-re:
+re: fclean all
 
 .PHONY: all bonus clean fclean re
