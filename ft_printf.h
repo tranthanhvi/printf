@@ -18,6 +18,6 @@ void	ft_print_hex(unsigned int num, size_t *counter, char *base);
 void	ft_print_ptr(void *ptr, size_t *counter);
 
 /* auxiliary functions */
-char	*ft_aux_pf(unsigned long long n, char *base);
+char	*ft_aux(unsigned long long num, char *base);
 
 #endif
