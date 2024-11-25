@@ -14,7 +14,7 @@
 
 void	ft_print_ptr(void *ptr, size_t counter)
 {
-	char	*str;
+	char			*str;
 	unsigned long	ptr_address;
 
 	ptr_address = (unsigned long)ptr;

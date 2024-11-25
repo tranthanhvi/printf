@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void ft_print_uint(unsigned int num, size_t counter)
+void	ft_print_uint(unsigned int num, size_t counter)
 {
 	char	*str;
 

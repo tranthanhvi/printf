@@ -27,9 +27,9 @@ void	ft_format(va_list va, char *str, size_t *counter)
 	else if (*str == 'x' || *str == 'X')
 	{
 		if (*str == 'x')
-			ft_print_hex(va_arg(va,  unsigned int), counter, HEX_LOW_BASE);
+			ft_print_hex(va_arg(va, unsigned int), counter, HEX_LOW_BASE);
 		else
-			ft_print_hex(va_arg(va,  unsigned int), counter, HEX_UPP_BASE);
+			ft_print_hex(va_arg(va, unsigned int), counter, HEX_UPP_BASE);
 	}
 	else if (*str == '%')
 		ft_print_char(*str, counter);
@@ -37,8 +37,8 @@ void	ft_format(va_list va, char *str, size_t *counter)
 
 int	ft_printf(char const *str, ...)
 {
-	va_list va;
-	size_t counter;
+	va_list	va;
+	size_t	counter;
 
 	if (!str)
 		return (0);
