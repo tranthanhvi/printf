@@ -41,7 +41,7 @@ static void	ft_calloc(size_t nmemb, size_t size)
 	unsigned char	*p;
 	size_t				total;
 
-	if (nmem == 0 || size == 0)
+	if (nmemb == 0 || size == 0)
 		return (malloc(0));
 	if (size > SIZE_MAX / nmemb)
 		return (NULL);
