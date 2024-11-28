@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 20:46:09 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/28 19:28:09 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/28 20:51:55 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_print_str(char *str, size_t *counter)
 {
 	if (!str)
-		str = "(null)";
+		return ;
 	while (*str)
 		ft_print_char(*str++, counter);
 }
