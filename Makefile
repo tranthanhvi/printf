@@ -1,26 +1,35 @@
 NAME = libftprintf.a
 
 SRCS = ft_print_hex.c \
-				ft_print_nbr.c \
-				ft_print_ptr.c \
-				ft_printcs.c \
-				ft_printf.c \
+       ft_print_nbr.c \
+       ft_print_char.c \
+       ft_print_ptr.c \
+       ft_print_str.c \
+       ft_print_uint.c \
+       ft_aux.c \
+       ft_printf.c
 
-OBJ = $(SRC:%.c=%.o)
+OBJ = $(SRCS:%.c=%.o)
 
-FLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
-$(NAME):
-	gcc $(FLAGS) -c $(SRCS)
-	ar rc $(NAME) $(OBJS)
+CC = gcc
+
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
-clean: rm -f $(OBJS)
+clean:
+	rm -f $(OBJ)
 
 fclean: clean
-		rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

@@ -6,13 +6,14 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 00:05:35 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/26 00:05:35 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:33:38 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
 

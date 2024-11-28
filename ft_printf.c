@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:12:06 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/21 23:12:06 by thantran         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:42:30 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_format(va_list va, char *str, size_t *counter)
 	else if (*str == 'i' || *str == 'd')
 		ft_print_nbr(va_arg(va, int), counter);
 	else if (*str == 'u')
-		ft_print_str(va_arg(va, unsigned int), counter);
+		ft_print_str(va_arg(va, char *), counter);
 	else if (*str == 'x' || *str == 'X')
 	{
 		if (*str == 'x')
@@ -49,7 +49,7 @@ int	ft_printf(char const *str, ...)
 		if (*str == '%')
 		{
 			str++;
-			ft_format(va (char *)str, &counter);
+			ft_format(va, (char *)str, &counter);
 		}
 		else
 			ft_print_char(*str, &counter);
