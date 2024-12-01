@@ -6,33 +6,33 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:12:06 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/28 19:42:30 by thantran         ###   ########.fr       */
+/*   Updated: 2024/12/01 13:45:27 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_format(va_list va, char *str, size_t *counter)
+void	ft_format(va_list va, char *specifier, size_t *counter)
 {
-	if (*str == 'c')
+	if (*specifier == 'c')
 		ft_print_char(va_arg(va, int), counter);
-	else if (*str == 's')
+	else if (*specifier == 's')
 		ft_print_str(va_arg(va, char *), counter);
-	else if (*str == 'p')
+	else if (*specifier == 'p')
 		ft_print_ptr(va_arg(va, void *), counter);
-	else if (*str == 'i' || *str == 'd')
+	else if (*specifier == 'i' || *specifier == 'd')
 		ft_print_nbr(va_arg(va, int), counter);
-	else if (*str == 'u')
-		ft_print_str(va_arg(va, char *), counter);
-	else if (*str == 'x' || *str == 'X')
+	else if (*specifier == 'u')
+		ft_print_uint(va_arg(va, unsigned int), counter);
+	else if (*specifier == 'x' || *specifier == 'X')
 	{
-		if (*str == 'x')
+		if (*specifier == 'x')
 			ft_print_hex(va_arg(va, unsigned int), counter, HEX_LOW_BASE);
 		else
 			ft_print_hex(va_arg(va, unsigned int), counter, HEX_UPP_BASE);
 	}
-	else if (*str == '%')
-		ft_print_char(*str, counter);
+	else if (*specifier == '%')
+		ft_print_char('%', counter);
 }
 
 int	ft_printf(char const *str, ...)
@@ -49,7 +49,8 @@ int	ft_printf(char const *str, ...)
 		if (*str == '%')
 		{
 			str++;
-			ft_format(va, (char *)str, &counter);
+			if (*str)
+				ft_format(va, (char *)str, &counter);
 		}
 		else
 			ft_print_char(*str, &counter);

@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 23:43:48 by thantran          #+#    #+#             */
-/*   Updated: 2024/11/28 20:28:12 by thantran         ###   ########.fr       */
+/*   Updated: 2024/12/01 13:52:13 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_print_ptr(void *ptr, size_t *counter)
 {
 	char			*str;
 	unsigned long	ptr_address;
-	
+
 	if (!ptr)
 	{
 		ft_print_str("(nil)", counter);
