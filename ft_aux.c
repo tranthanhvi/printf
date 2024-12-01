@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:53:36 by thantran          #+#    #+#             */
-/*   Updated: 2024/12/01 13:52:05 by thantran         ###   ########.fr       */
+/*   Updated: 2024/12/01 15:32:04 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	ft_bzero(void *pointer, size_t size)
 	}
 }
 
-void	*ft_calloc(size_t nmemb, size_t size)
+static void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 
