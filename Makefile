@@ -6,7 +6,7 @@ SRCS = ft_print_hex.c \
        ft_print_ptr.c \
        ft_print_str.c \
        ft_print_uint.c \
-       ft_aux.c \
+       ft_base_convert.c \
        ft_printf.c
 
 OBJ = $(SRCS:%.c=%.o)

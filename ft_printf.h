@@ -28,6 +28,6 @@ void	ft_print_nbr(int num, size_t *counter);
 void	ft_print_uint(unsigned int num, size_t *counter);
 void	ft_print_hex(unsigned int num, size_t *counter, char *base);
 void	ft_print_ptr(void *ptr, size_t *counter);
-char	*ft_aux(unsigned long long num, char *base);
+char	*ft_base_convert(unsigned long long num, char *base);
 
 #endif

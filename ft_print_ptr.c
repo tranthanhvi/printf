@@ -24,7 +24,7 @@ void	ft_print_ptr(void *ptr, size_t *counter)
 	}
 	ptr_address = (unsigned long)ptr;
 	ft_print_str("0x", counter);
-	str = ft_aux(ptr_address, HEX_LOW_BASE);
+	str = ft_base_convert(ptr_address, HEX_LOW_BASE);
 	ft_print_str(str, counter);
 	free(str);
 }

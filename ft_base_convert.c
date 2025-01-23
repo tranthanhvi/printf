@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_aux.c                                           :+:      :+:    :+:   */
+/*   ft_base_convert.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 22:53:36 by thantran          #+#    #+#             */
-/*   Updated: 2024/12/01 15:32:04 by thantran         ###   ########.fr       */
+/*   Created: 2025/01/23 13:13:41 by thantran          #+#    #+#             */
+/*   Updated: 2025/01/23 13:13:41 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static size_t	ft_numlen(unsigned long long num, char *base)
 	return (len);
 }
 
-char	*ft_aux(unsigned long long num, char *base)
+char	*ft_base_convert(unsigned long long num, char *base)
 {
 	char	*str;
 	int		num_len;

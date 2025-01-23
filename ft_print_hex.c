@@ -16,7 +16,7 @@ void	ft_print_hex(unsigned int num, size_t *counter, char *base)
 {
 	char	*str;
 
-	str = ft_aux(num, base);
+	str = ft_base_convert(num, base);
 	ft_print_str(str, counter);
 	free(str);
 }
