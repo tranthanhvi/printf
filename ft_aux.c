@@ -47,7 +47,7 @@ static void	*ft_calloc(size_t nmemb, size_t size)
 	return (p);
 }
 
-static size_t	ft_len(unsigned long long num, char *base)
+static size_t	ft_numlen(unsigned long long num, char *base)
 {
 	size_t				len;
 	unsigned long long	base_len;
@@ -70,7 +70,7 @@ char	*ft_aux(unsigned long long num, char *base)
 
 	if (!base || ft_strlen(base) < 2)
 		return (NULL);
-	num_len = ft_len(num, base);
+	num_len = ft_numlen(num, base);
 	base_len = ft_strlen(base);
 	str = ft_calloc((num_len + 1), sizeof(char));
 	if (!str)
