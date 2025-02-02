@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 23:47:20 by thantran          #+#    #+#             */
-/*   Updated: 2024/12/01 15:52:20 by thantran         ###   ########.fr       */
+/*   Updated: 2025/01/27 17:05:28 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_print_uint(unsigned int num, size_t *counter)
 {
 	char	*str;
 
-	str = ft_aux(num, "0123456789");
+	str = ft_base_convert(num, "0123456789");
 	ft_print_str(str, counter);
 	free(str);
 }

@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:12:06 by thantran          #+#    #+#             */
-/*   Updated: 2024/12/01 13:45:27 by thantran         ###   ########.fr       */
+/*   Updated: 2025/02/02 15:55:12 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,5 @@ int	ft_printf(char const *str, ...)
 	va_end(va);
 	return (counter);
 }
+
+
