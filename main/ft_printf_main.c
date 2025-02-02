@@ -6,7 +6,7 @@
 /*   By: thantran <thantran@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:12:06 by thantran          #+#    #+#             */
-/*   Updated: 2025/02/02 15:55:21 by thantran         ###   ########.fr       */
+/*   Updated: 2025/02/02 16:06:19 by thantran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,6 +185,7 @@ int main(void)
     count = ft_printf("Large unsigned: %u\n", 4294967295);
     // Expected: "Large unsigned: 4294967295"
     // Characters printed: 24
-
+ft_printf("Printed characters: %zu\n", count);
     return 0;
 }
+// gcc -o ft_printf ft_printf.c -L. -lftprintf
